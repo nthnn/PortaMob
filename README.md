@@ -46,6 +46,10 @@ PortaMob shield is an ingenious extension for the Arduino UNO platform. The shie
 2. Now, click the `File > Examples > PortaMob` from the menu bar of the Arduino IDE.
 3. Cheers!
 
+## Schematics
+
+![PortaMob Schematic Diagram](.//schematics/PortaMob-R1.png)
+
 ## License
 
 PortaMob has two (2) license. The hardware itself (including the PCB Gerber files and the schematic diagram) is under the **CERN Open Hardware Licence Version 2 - Strongly Reciprocal**, while the PortaMob repository as a whole is under **MIT Public License**.
