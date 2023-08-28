@@ -25,17 +25,21 @@
 var NAVTREE =
 [
   [ "PortaMob", "index.html", [
+    [ "PortaMob Overview", "index.html", null ],
     [ "Classes", "annotated.html", [
-      [ "Why PortaMob?", "index.html#autotoc_md0", null ],
-      [ "Key Components", "index.html#autotoc_md1", null ],
-      [ "Hardware Setup", "index.html#autotoc_md2", null ],
-      [ "Software Setup", "index.html#autotoc_md3", null ],
-      [ "License", "index.html#autotoc_md4", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ]
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
