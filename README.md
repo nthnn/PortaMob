@@ -1,5 +1,7 @@
 # PortaMob Arduino Shield
 
+![Arduino CI](https://github.com/nthnn/PortaMob/actions/workflows/arduino_ci.yml/badge.svg) ![Arduino Lint](https://github.com/nthnn/PortaMob/actions/workflows/arduino_lint.yml/badge.svg)
+
 PortaMob shield is an ingenious extension for the Arduino UNO platform. The shield aims to replicate the functionality of a portable mobile device, incorporating a 3x3 button grid, a monochromatic OLED display, a 24LC256 EEPROM IC, and various communication interfaces' header pins. 
 
 <p align="center">

@@ -32,4 +32,4 @@ jobs:
 
       - name: Build Arduino library
         run: |
-          arduino-cli compile --fqbn arduino:avr:mega --library src --library Adafruit_GFX --library Adafruit_SSD1306 --build-path build examples/full_example/full_example.ino
+          arduino-cli compile --fqbn arduino:avr:mega --library src --library Adafruit-GFX-Library --library Adafruit_SSD1306 --build-path build examples/full_example/full_example.ino
