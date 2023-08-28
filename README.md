@@ -38,7 +38,7 @@ PortaMob shield is an ingenious extension for the Arduino UNO platform. The shie
 
 ## Hardware Setup
 
-1. Download the Gerber file from folder [`pcb_file`](./pcb_file).
+1. Download the Gerber file from folder [`pcb_files`](./pcb_files).
 2. Go to [JLCPCB](https://jlcpcb.com/) or any of your favorite PCB manufacturer to fabricate the PortaMob board. *PS: I am not sponsored, it just happened that JLCPCB is my favorite.*
 3. After soldering all the necessary components (header pins, push buttons, and maybe even the monochromatic display), you can now mount the board on top of Arduino UNO or Arduino Mega.
 
