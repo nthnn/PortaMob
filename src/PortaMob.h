@@ -15,6 +15,7 @@
 #define PORTAMOB_KEY_9 10
 
 #define PORTAMOB_EEPROM_ADDR 0x50
+#define PORTAMOB_SCREEN_ADDRESS 0x3C
 
 class PortaMob {
 public:
