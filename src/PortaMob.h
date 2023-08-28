@@ -18,13 +18,19 @@
 
 class PortaMob {
 public:
-    static Adafruit_SSD1306 portamob_display(void (on_error*)());
+    static Adafruit_SSD1306 portamob_display(
+        void (on_error*)()
+    );
 
     static void init_buttons(void);
     static bool is_button_pressed(uint8_t button);
 
     static void init_i2c();
-    static void eeprom_write(uint8_t addr, uint8_t value);
+    static void eeprom_write(
+        uint8_t addr,
+        uint8_t value
+    );
+
     static uint8_t eeprom_read(uint8_t addr);
     static bool has_eeprom();
 };
