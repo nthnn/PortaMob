@@ -19,7 +19,7 @@
 class PortaMob {
 public:
     static Adafruit_SSD1306 portamob_display(
-        void (on_error*)()
+        void (*on_error)()
     );
 
     static void init_buttons(void);
