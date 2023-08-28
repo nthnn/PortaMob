@@ -10,7 +10,7 @@ Adafruit_SSD1306 PortaMob::portamob_display(void (*on_error)()) {
 
     if(!display.begin(
         SSD1306_SWITCHCAPVCC,
-        SCREEN_ADDRESS
+        PORTAMOB_SCREEN_ADDRESS
     )) on_error();
 
     display.clearDisplay();
