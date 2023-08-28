@@ -1,3 +1,7 @@
+// PortaMob Shield Full Example
+// By: Nathanne Isip
+// 29 August 2023
+
 #include <Adafruit_SSD1306.h>
 #include <PortaMob.h>
 
