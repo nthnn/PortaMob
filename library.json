@@ -1,0 +1,35 @@
+{
+    "name": "PortaMob",
+    "version": "1.0.0",
+    "description": "Portable Mobile device-like shield for Arduino UNO.",
+    "keywords": "portable,mobile,device,shield,arduino,uno",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nthnn/PortaMob"
+    },
+    "authors": [
+        {
+            "name": "nathannestein",
+            "email": "nathanneisip@gmail.com",
+            "url": "https://nthnn.github.io/"
+        }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/nthnn/PortaMob",
+    "platforms": "*",
+    "frameworks": ["arduino"],
+    "dependencies": [
+        {
+            "name": "Adafruit GFX Library",
+            "version": ">=1.0.0"
+        },
+        {
+            "name": "Adafruit BusIO",
+            "version": ">=1.0.0"
+        },
+        {
+            "name": "Adafruit SSD1306",
+            "version": ">=1.0.0"
+        }
+    ]
+}
