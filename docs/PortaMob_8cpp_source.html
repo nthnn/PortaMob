@@ -125,66 +125,64 @@ $(document).ready(function(){initNavTree('PortaMob_8cpp_source.html',''); initRe
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    )) on_error();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    display.clearDisplay();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    display.display();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> display;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">PortaMob::init_buttons</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a4a38f8ea78621c51766aa08787adfe9d">PORTAMOB_KEY_1</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a47a778580f870843b01512e082b0d237">PORTAMOB_KEY_2</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#aba3c11dd19eef79b3263246e7c3e3a0e">PORTAMOB_KEY_3</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#adc7f053275608cebdb4c3b84ea06050b">PORTAMOB_KEY_4</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a0ab43a2d9754befbbffc881b513d957b">PORTAMOB_KEY_5</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a2a421ee0ed07dd37e5ffe940d4aa545a">PORTAMOB_KEY_6</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#aca341d460c13e72cb916ac8700be1667">PORTAMOB_KEY_7</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#ab7197fd5d349aab5d0b7977f7a608471">PORTAMOB_KEY_8</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a9729c7248b60d23f51357de41259e95e">PORTAMOB_KEY_9</a>, INPUT_PULLUP);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">   57</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">PortaMob::is_button_pressed</a>(uint8_t button) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> digitalRead(button) == LOW;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">PortaMob::init_i2c</a>() {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    Wire.begin();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">PortaMob::eeprom_write</a>(</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    uint8_t addr,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    uint8_t value</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &gt;&gt; 8));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &amp; 0xFF));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Wire.write(value);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Wire.endTransmission();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">   78</a></span>&#160;uint8_t <a class="code" href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">PortaMob::eeprom_read</a>(uint8_t addr) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">byte</span> data = 0xFF;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &gt;&gt; 8));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &amp; 0xFF));</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    Wire.endTransmission();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    Wire.requestFrom(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>, 1);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span>(Wire.available())</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        data = Wire.read();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classPortaMob.html#aad651e0ddea731208275157489555100">   93</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPortaMob.html#aad651e0ddea731208275157489555100">PortaMob::has_eeprom</a>() {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> Wire.endTransmission(</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ) == 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> display;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">PortaMob::init_buttons</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a4a38f8ea78621c51766aa08787adfe9d">PORTAMOB_KEY_1</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a47a778580f870843b01512e082b0d237">PORTAMOB_KEY_2</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#aba3c11dd19eef79b3263246e7c3e3a0e">PORTAMOB_KEY_3</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#adc7f053275608cebdb4c3b84ea06050b">PORTAMOB_KEY_4</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a0ab43a2d9754befbbffc881b513d957b">PORTAMOB_KEY_5</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a2a421ee0ed07dd37e5ffe940d4aa545a">PORTAMOB_KEY_6</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#aca341d460c13e72cb916ac8700be1667">PORTAMOB_KEY_7</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#ab7197fd5d349aab5d0b7977f7a608471">PORTAMOB_KEY_8</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    pinMode(<a class="code" href="PortaMob_8h.html#a9729c7248b60d23f51357de41259e95e">PORTAMOB_KEY_9</a>, INPUT_PULLUP);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">   55</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">PortaMob::is_button_pressed</a>(uint8_t button) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> digitalRead(button) == LOW;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">PortaMob::init_i2c</a>() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Wire.begin();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">PortaMob::eeprom_write</a>(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    uint8_t addr,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    uint8_t value</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &gt;&gt; 8));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &amp; 0xFF));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Wire.write(value);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    Wire.endTransmission();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">   76</a></span>&#160;uint8_t <a class="code" href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">PortaMob::eeprom_read</a>(uint8_t addr) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">byte</span> data = 0xFF;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &gt;&gt; 8));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    Wire.write((<span class="keywordtype">int</span>)(addr &amp; 0xFF));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Wire.endTransmission();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Wire.requestFrom(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>, 1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span>(Wire.available())</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        data = Wire.read();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPortaMob.html#aad651e0ddea731208275157489555100">   91</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPortaMob.html#aad651e0ddea731208275157489555100">PortaMob::has_eeprom</a>() {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> Wire.endTransmission(</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ) == 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="ttc" id="aPortaMob_8h_html"><div class="ttname"><a href="PortaMob_8h.html">PortaMob.h</a></div><div class="ttdoc">The PortaMob Arduino Shield Library.</div></div>
 <div class="ttc" id="aPortaMob_8h_html_a0ab43a2d9754befbbffc881b513d957b"><div class="ttname"><a href="PortaMob_8h.html#a0ab43a2d9754befbbffc881b513d957b">PORTAMOB_KEY_5</a></div><div class="ttdeci">#define PORTAMOB_KEY_5</div><div class="ttdoc">Digital pin number for button 5.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00052">PortaMob.h:52</a></div></div>
 <div class="ttc" id="aPortaMob_8h_html_a2a421ee0ed07dd37e5ffe940d4aa545a"><div class="ttname"><a href="PortaMob_8h.html#a2a421ee0ed07dd37e5ffe940d4aa545a">PORTAMOB_KEY_6</a></div><div class="ttdeci">#define PORTAMOB_KEY_6</div><div class="ttdoc">Digital pin number for button 6.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00053">PortaMob.h:53</a></div></div>
@@ -197,13 +195,13 @@ $(document).ready(function(){initNavTree('PortaMob_8cpp_source.html',''); initRe
 <div class="ttc" id="aPortaMob_8h_html_aca341d460c13e72cb916ac8700be1667"><div class="ttname"><a href="PortaMob_8h.html#aca341d460c13e72cb916ac8700be1667">PORTAMOB_KEY_7</a></div><div class="ttdeci">#define PORTAMOB_KEY_7</div><div class="ttdoc">Digital pin number for button 7.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00054">PortaMob.h:54</a></div></div>
 <div class="ttc" id="aPortaMob_8h_html_adb1c2d72f88490b8d686f3d36ab1f1fa"><div class="ttname"><a href="PortaMob_8h.html#adb1c2d72f88490b8d686f3d36ab1f1fa">PORTAMOB_SCREEN_ADDRESS</a></div><div class="ttdeci">#define PORTAMOB_SCREEN_ADDRESS</div><div class="ttdoc">OLED screen I2C address.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00059">PortaMob.h:59</a></div></div>
 <div class="ttc" id="aPortaMob_8h_html_adc7f053275608cebdb4c3b84ea06050b"><div class="ttname"><a href="PortaMob_8h.html#adc7f053275608cebdb4c3b84ea06050b">PORTAMOB_KEY_4</a></div><div class="ttdeci">#define PORTAMOB_KEY_4</div><div class="ttdoc">Digital pin number for button 4.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00051">PortaMob.h:51</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_a40ee4aad4c8169ec7e135f2fc9c16467"><div class="ttname"><a href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">PortaMob::init_i2c</a></div><div class="ttdeci">static void init_i2c()</div><div class="ttdoc">Initializes the I2C communication.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00061">PortaMob.cpp:61</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_a40ee4aad4c8169ec7e135f2fc9c16467"><div class="ttname"><a href="classPortaMob.html#a40ee4aad4c8169ec7e135f2fc9c16467">PortaMob::init_i2c</a></div><div class="ttdeci">static void init_i2c()</div><div class="ttdoc">Initializes the I2C communication.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00059">PortaMob.cpp:59</a></div></div>
 <div class="ttc" id="aclassPortaMob_html_a5791c22c900a4a945575bb3eca36ad73"><div class="ttname"><a href="classPortaMob.html#a5791c22c900a4a945575bb3eca36ad73">PortaMob::portamob_display</a></div><div class="ttdeci">static Adafruit_SSD1306 portamob_display(void(*on_error)())</div><div class="ttdoc">Initializes the PortaMob display.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00031">PortaMob.cpp:31</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_a5bb640132b8313911631a86a67397c59"><div class="ttname"><a href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">PortaMob::init_buttons</a></div><div class="ttdeci">static void init_buttons(void)</div><div class="ttdoc">Initializes the push buttons on the PortaMob Shield.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00045">PortaMob.cpp:45</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_a8831d0c7fd5e0f1df022a8bd24cf5241"><div class="ttname"><a href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">PortaMob::is_button_pressed</a></div><div class="ttdeci">static bool is_button_pressed(uint8_t button)</div><div class="ttdoc">Checks if a specific button is pressed.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00057">PortaMob.cpp:57</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_a97338e05b2915400c7c61a03f60d69d0"><div class="ttname"><a href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">PortaMob::eeprom_write</a></div><div class="ttdeci">static void eeprom_write(uint8_t addr, uint8_t value)</div><div class="ttdoc">Writes a value to the EEPROM memory.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00065">PortaMob.cpp:65</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_aad651e0ddea731208275157489555100"><div class="ttname"><a href="classPortaMob.html#aad651e0ddea731208275157489555100">PortaMob::has_eeprom</a></div><div class="ttdeci">static bool has_eeprom()</div><div class="ttdoc">Checks if the EEPROM memory is present.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00093">PortaMob.cpp:93</a></div></div>
-<div class="ttc" id="aclassPortaMob_html_abec64900ce3b05b9a547b605bf57146f"><div class="ttname"><a href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">PortaMob::eeprom_read</a></div><div class="ttdeci">static uint8_t eeprom_read(uint8_t addr)</div><div class="ttdoc">Reads a value from the EEPROM memory.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00078">PortaMob.cpp:78</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_a5bb640132b8313911631a86a67397c59"><div class="ttname"><a href="classPortaMob.html#a5bb640132b8313911631a86a67397c59">PortaMob::init_buttons</a></div><div class="ttdeci">static void init_buttons(void)</div><div class="ttdoc">Initializes the push buttons on the PortaMob Shield.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00043">PortaMob.cpp:43</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_a8831d0c7fd5e0f1df022a8bd24cf5241"><div class="ttname"><a href="classPortaMob.html#a8831d0c7fd5e0f1df022a8bd24cf5241">PortaMob::is_button_pressed</a></div><div class="ttdeci">static bool is_button_pressed(uint8_t button)</div><div class="ttdoc">Checks if a specific button is pressed.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00055">PortaMob.cpp:55</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_a97338e05b2915400c7c61a03f60d69d0"><div class="ttname"><a href="classPortaMob.html#a97338e05b2915400c7c61a03f60d69d0">PortaMob::eeprom_write</a></div><div class="ttdeci">static void eeprom_write(uint8_t addr, uint8_t value)</div><div class="ttdoc">Writes a value to the EEPROM memory.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00063">PortaMob.cpp:63</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_aad651e0ddea731208275157489555100"><div class="ttname"><a href="classPortaMob.html#aad651e0ddea731208275157489555100">PortaMob::has_eeprom</a></div><div class="ttdeci">static bool has_eeprom()</div><div class="ttdoc">Checks if the EEPROM memory is present.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00091">PortaMob.cpp:91</a></div></div>
+<div class="ttc" id="aclassPortaMob_html_abec64900ce3b05b9a547b605bf57146f"><div class="ttname"><a href="classPortaMob.html#abec64900ce3b05b9a547b605bf57146f">PortaMob::eeprom_read</a></div><div class="ttdeci">static uint8_t eeprom_read(uint8_t addr)</div><div class="ttdoc">Reads a value from the EEPROM memory.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8cpp_source.html#l00076">PortaMob.cpp:76</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="nav-path" class="navpath">
