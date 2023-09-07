@@ -46,13 +46,13 @@
 #include <Adafruit_SSD1306.h>
 
 #define PORTAMOB_KEY_1 2     ///< Digital pin number for button 1
-#define PORTAMOB_KEY_2 3     ///< Digital pin number for button 2
-#define PORTAMOB_KEY_3 4     ///< Digital pin number for button 3
-#define PORTAMOB_KEY_4 5     ///< Digital pin number for button 4
-#define PORTAMOB_KEY_5 6     ///< Digital pin number for button 5
-#define PORTAMOB_KEY_6 7     ///< Digital pin number for button 6
-#define PORTAMOB_KEY_7 8     ///< Digital pin number for button 7
-#define PORTAMOB_KEY_8 9     ///< Digital pin number for button 8
+#define PORTAMOB_KEY_2 5     ///< Digital pin number for button 2
+#define PORTAMOB_KEY_3 8     ///< Digital pin number for button 3
+#define PORTAMOB_KEY_4 9     ///< Digital pin number for button 4
+#define PORTAMOB_KEY_5 3     ///< Digital pin number for button 5
+#define PORTAMOB_KEY_6 6     ///< Digital pin number for button 6
+#define PORTAMOB_KEY_7 4     ///< Digital pin number for button 7
+#define PORTAMOB_KEY_8 7     ///< Digital pin number for button 8
 #define PORTAMOB_KEY_9 10    ///< Digital pin number for button 9
 
 #define PORTAMOB_EEPROM_ADDR 0x50       ///< EEPROM I2C address
