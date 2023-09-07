@@ -37,8 +37,6 @@ Adafruit_SSD1306 PortaMob::portamob_display(void (*on_error)()) {
     )) on_error();
 
     display.clearDisplay();
-    display.display();
-
     return display;
 }
 

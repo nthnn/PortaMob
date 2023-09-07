@@ -48,9 +48,9 @@
 #define PORTAMOB_KEY_1 2     ///< Digital pin number for button 1
 #define PORTAMOB_KEY_2 5     ///< Digital pin number for button 2
 #define PORTAMOB_KEY_3 8     ///< Digital pin number for button 3
-#define PORTAMOB_KEY_4 6     ///< Digital pin number for button 4
-#define PORTAMOB_KEY_5 9    ///< Digital pin number for button 5
-#define PORTAMOB_KEY_6 3    ///< Digital pin number for button 6
+#define PORTAMOB_KEY_4 9     ///< Digital pin number for button 4
+#define PORTAMOB_KEY_5 3    ///< Digital pin number for button 5
+#define PORTAMOB_KEY_6 6    ///< Digital pin number for button 6
 #define PORTAMOB_KEY_7 4     ///< Digital pin number for button 7
 #define PORTAMOB_KEY_8 7     ///< Digital pin number for button 8
 #define PORTAMOB_KEY_9 10    ///< Digital pin number for button 9
