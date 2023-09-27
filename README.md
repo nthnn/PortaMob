@@ -25,9 +25,12 @@ PortaMob shield is an ingenious extension for the Arduino UNO platform. The shie
 
     The development of the PortaMob shield is underpinned by a thoughtful design philosophy that prioritizes usability, adaptability, and pedagogical value. The button grid and OLED display were strategically selected to mirror the intuitive interface of conventional mobile devices. The EEPROM memory and communication interfaces amplify the shield's pragmatic applications.
 
-    <p align="center">
-        <img src="./assets/PortaMob-R1-2D.png" width="70%" />
-    </p>
+    <table align="center">
+        <tr>
+            <td><img src="./assets/PortaMob-R2-Top.svg" width="100%" /></td>
+            <td><img src="./assets/PortaMob-R2-Bottom.svg" width="100%" /></td>
+        </tr>
+    </table>
 
 - **Programmable Functionality and Applications**
 
@@ -61,7 +64,7 @@ PortaMob shield is an ingenious extension for the Arduino UNO platform. The shie
 
 ## Schematics
 
-![PortaMob Schematic Diagram](.//schematics/PortaMob-R1.png)
+![PortaMob Schematic Diagram](.//schematics/PortaMob-R2.png)
 
 ## License
 
