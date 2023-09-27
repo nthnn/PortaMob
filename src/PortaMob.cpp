@@ -91,7 +91,5 @@ uint8_t PortaMob::eeprom_read(uint8_t addr) {
 bool PortaMob::has_eeprom() {
     Wire.beginTransmission(PORTAMOB_EEPROM_ADDR);
 
-    return Wire.endTransmission(
-        PORTAMOB_EEPROM_ADDR
-    ) == 0;
+    return Wire.endTransmission(PORTAMOB_EEPROM_ADDR) == 0;
 }
