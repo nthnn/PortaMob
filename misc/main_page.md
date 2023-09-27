@@ -63,7 +63,7 @@
 
 ## Schematics
 
-![PortaMob Schematic Diagram](.//schematics/PortaMob-R2.png)
+![PortaMob Schematic Diagram](../schematics/PortaMob-R2.png)
 
 ## License
 
