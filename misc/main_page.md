@@ -24,9 +24,12 @@
 
     The development of the %PortaMob shield is underpinned by a thoughtful design philosophy that prioritizes usability, adaptability, and pedagogical value. The button grid and OLED display were strategically selected to mirror the intuitive interface of conventional mobile devices. The EEPROM memory and communication interfaces amplify the shield's pragmatic applications.
 
-    <div align="center">
-        <img src="./PortaMob-R1-2D.png" width="100%" />
-    </div>
+    <table align="center">
+        <tr>
+            <td><img src="./assets/PortaMob-R2-Top.svg" width="100%" /></td>
+            <td><img src="./assets/PortaMob-R2-Bottom.svg" width="100%" /></td>
+        </tr>
+    </table>
 
 - **Programmable Functionality and Applications**
 
@@ -57,6 +60,10 @@
 1. Just simply look for %PortaMob on the library manager of the Arduino IDE and install/download it.
 2. Now, click the `File > Examples > %PortaMob` from the menu bar of the Arduino IDE.
 3. Cheers!
+
+## Schematics
+
+![PortaMob Schematic Diagram](.//schematics/PortaMob-R2.png)
 
 ## License
 

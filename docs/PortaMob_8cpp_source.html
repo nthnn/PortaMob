@@ -179,10 +179,8 @@ $(document).ready(function(){initNavTree('PortaMob_8cpp_source.html',''); initRe
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classPortaMob.html#aad651e0ddea731208275157489555100">   91</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classPortaMob.html#aad651e0ddea731208275157489555100">PortaMob::has_eeprom</a>() {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    Wire.beginTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> Wire.endTransmission(</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ) == 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> Wire.endTransmission(<a class="code" href="PortaMob_8h.html#a9ad7be0407f03df793282ed886bbbc56">PORTAMOB_EEPROM_ADDR</a>) == 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="ttc" id="aPortaMob_8h_html"><div class="ttname"><a href="PortaMob_8h.html">PortaMob.h</a></div><div class="ttdoc">The PortaMob Arduino Shield Library.</div></div>
 <div class="ttc" id="aPortaMob_8h_html_a0ab43a2d9754befbbffc881b513d957b"><div class="ttname"><a href="PortaMob_8h.html#a0ab43a2d9754befbbffc881b513d957b">PORTAMOB_KEY_5</a></div><div class="ttdeci">#define PORTAMOB_KEY_5</div><div class="ttdoc">Digital pin number for button 5.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00052">PortaMob.h:52</a></div></div>
 <div class="ttc" id="aPortaMob_8h_html_a2a421ee0ed07dd37e5ffe940d4aa545a"><div class="ttname"><a href="PortaMob_8h.html#a2a421ee0ed07dd37e5ffe940d4aa545a">PORTAMOB_KEY_6</a></div><div class="ttdeci">#define PORTAMOB_KEY_6</div><div class="ttdoc">Digital pin number for button 6.</div><div class="ttdef"><b>Definition:</b> <a href="PortaMob_8h_source.html#l00053">PortaMob.h:53</a></div></div>
